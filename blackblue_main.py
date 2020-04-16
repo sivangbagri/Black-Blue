@@ -1,8 +1,14 @@
+"""
+Author: Shivang
+Released on : 10/4/20
+Purpose : Black&Blue pygame
+
+"""
+
 import pygame
 import random
 import auto_py_to_exe
 
-# released on 10/4/20
 print('\nRelive the classic TIC_TAC_TOE in all new Black&Blue XD')
 print('Developer- sivangbagri@gamil.com')
 pygame.init()
@@ -27,7 +33,7 @@ seventh = pygame.draw.rect(screen, (255, 0, 0), (50, 370, 150, 150))
 eight = pygame.draw.rect(screen, (255, 0, 0), (210, 370, 150, 150))
 nine = pygame.draw.rect(screen, (255, 0, 0), (370, 370, 150, 150))
 
-turn = 'player1'
+turn = 'player1' #for multiplayer
 
 first_open = second_open = third_open = fourth_open = fifth_open = sixth_open = seventh_open = eight_open = nine_open = True
 
@@ -41,6 +47,8 @@ run = True
 score = [[0, 0, 0],
          [0, 0, 0],
          [0, 0, 0]]
+
+#main loop 
 
 while run:
 
@@ -72,7 +80,7 @@ while run:
                 if turn == 'player1':
                     score[0][0] = 1
                     first_new = pygame.draw.rect(screen, (0, 0, 128), (50, 50, 150, 150))
-                    turn = 'player2'
+                    turn = 'player2' # to allow player 2
                 else:
                     score[0][0] = 2
                     pygame.draw.rect(screen, (0, 0, 0), (50, 50, 150, 150))
